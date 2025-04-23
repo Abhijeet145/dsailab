@@ -61,3 +61,29 @@ yarn-error.log*
 # Images
 *.png
 *.jpg   
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.ico
+# Audio
+*.mp3
+*.wav
+*.flac
+*.ogg
+# Video
+*.mp4
+*.avi
+*.mov
+*.mkv
+# Archives
+*.zip
+*.tar
+*.gz
+*.bz2
+# Temporary files
+*.tmp
+*.temp
+# Backup files
+*.bak
+*.old
