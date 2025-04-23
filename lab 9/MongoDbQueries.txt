@@ -1,0 +1,198 @@
+use company
+
+db.employees.insertMany([
+  {
+    name: "Alice",
+    age: 28,
+    department: "Engineering",
+    skills: ["JavaScript", "MongoDB", "Node.js"],
+    salary: 70000
+  },
+  {
+    name: "Bob",
+    age: 32,
+    department: "Engineering",
+    skills: ["Python", "MongoDB", "Docker"],
+    salary: 80000
+  },
+  {
+    name: "Charlie",
+    age: 29,
+    department: "HR",
+    skills: ["Recruitment", "Communication"],
+    salary: 60000
+  },
+  {
+    name: "David",
+    age: 35,
+    department: "Sales",
+    skills: ["Negotiation", "CRM", "Networking"],
+    salary: 75000
+  }
+])
+
+
+
+//To search an id
+db.employees.find({ department: "Engineering" })
+{
+  _id: ObjectId('67e139f3cfae759630988ec2'),
+  name: 'Alice',
+  age: 28,
+  department: 'Engineering',
+  skills: [
+    'JavaScript',
+    'Node.js'
+  ],
+  salary: 80000
+}
+{
+  _id: ObjectId('67e139f3cfae759630988ec6'),
+  name: 'Eve',
+  age: 26,
+  department: 'Engineering',
+  skills: [
+    'C++',
+    'Embedded Systems',
+    'Java'
+  ],
+  salary: 90000
+}
+
+
+
+//update BOB's age
+db.employees.updateOne(
+  { name: "Bob" },
+  { $set: { age: 33 } }
+)
+
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+
+
+
+
+//Delete one id
+db.employees.deleteOne({ name: "Eve" })
+
+{
+  acknowledged: true,
+  deletedCount: 1
+}
+
+
+//Write queries using Aggregate methods and Expression operators 
+db.employees.aggregate([
+  {
+    $group: {
+      _id: "$department",
+      avgSalary: { $avg: "$salary" }
+    }
+  }
+])
+
+{
+  _id: 'Engineering',
+  avgSalary: 80000
+}
+{
+  _id: 'HR',
+  avgSalary: 60000
+}
+{
+  _id: 'Marketing',
+  avgSalary: 75000
+}
+
+
+
+db.employees.aggregate([
+  {
+    $match: { salary: { $gt: 70000 } }
+  }
+])
+
+{
+  _id: ObjectId('67e139f3cfae759630988ec2'),
+  name: 'Alice',
+  age: 28,
+  department: 'Engineering',
+  skills: [
+    'JavaScript',
+    'Node.js'
+  ],
+  salary: 80000
+}
+
+{
+  _id: ObjectId('67e139f3cfae759630988ec5'),
+  name: 'David',
+  age: 32,
+  department: 'Marketing',
+  skills: [
+    'SEO',
+    'Content Writing'
+  ],
+  salary: 75000
+}
+
+
+
+
+db.employees.aggregate([
+  {
+    $addFields: {
+      isSenior: { $gt: ["$age", 30] }
+    }
+  }
+])
+{
+  _id: ObjectId('67e139f3cfae759630988ec2'),
+  name: 'Alice',
+  age: 28,
+  department: 'Engineering',
+  skills: [
+    'JavaScript',
+    'Node.js'
+  ],
+  salary: 80000,
+  isSenior: false
+}
+{
+  _id: ObjectId('67e139f3cfae759630988ec3'),
+  name: 'Bob',
+  age: 46,
+  department: 'HR',
+  skills: [
+    'Recruitment',
+    'Management'
+  ],
+  salary: 60000,
+  isSenior: true
+}
+{
+  _id: ObjectId('67e139f3cfae759630988ec5'),
+  name: 'David',
+  age: 32,
+  department: 'Marketing',
+  skills: [
+    'SEO',
+    'Content Writing'
+  ],
+  salary: 75000,
+  isSenior: true
+}
+
+
+
+//Write queries to find documents using Comparison operators and Array operators.
+db.employees.find({ salary: { $gte: 75000 } })
+
+db.employees.find({ skills: { $size: 2 } })
+

@@ -1,0 +1,140 @@
+KMeans C++ program output:
+
+Distance Table:
+        Centroid 0      Centroid 1      Centroid 2
+Point 0 8.06226 10.8167 4.6
+Point 1 5.14198 8.62786 5.66039
+Point 2 6.40312 5       4.23792
+Point 3 6.08276 2.23607 7.4
+Point 4 8.77268 9.10824 0
+Point 5 8       3.16228 9.13017
+Point 6 1.41421 6       10.1074
+Point 7 5.09902 0       9.10824
+Point 8 0       5.09902 8.77268
+
+Current Centroids:
+Centroid 0: 9 3 
+Centroid 1: 10 8 
+Centroid 2: 1 6.6 
+
+Distance Table:
+        Centroid 0      Centroid 1      Centroid 2
+Point 0 6.672   10.8525 3.77654
+Point 1 3.69624 9.04163 4.08847
+Point 2 6.32315 4.21637 3.63257
+Point 3 6.74158 1.05409 6.64296
+Point 4 7.95124 8.45406 1.7075
+Point 5 8.83453 1.66667 8.62142
+Point 6 2.34852 7.4012  8.4417
+Point 7 6.18996 1.66667 8.05371
+Point 8 1.52169 6.33333 7.13178
+
+Current Centroids:
+Centroid 0: 7.66667 2.26667 
+Centroid 1: 9 9.33333 
+Centroid 2: 2.33333 5.53333 
+Converged in 2 iterations.
+Point 0 is in cluster 2.
+Point 1 is in cluster 0.
+Point 2 is in cluster 2.
+Point 3 is in cluster 1.
+Point 4 is in cluster 2.
+Point 5 is in cluster 1.
+Point 6 is in cluster 0.
+Point 7 is in cluster 1.
+Point 8 is in cluster 0.
+
+Final Centroids:
+Centroid 0: 7.66667 2.26667 
+Centroid 1: 9 9.33333 
+Centroid 2: 2.33333 5.53333 
+.
+.
+.
+.
+.
+.
+
+Distance Table:
+        Centroid 0      Centroid 1      Centroid 2
+Point 0 9       15      4.6
+Point 1 6.2     12.2    7.8
+Point 2 9       5       5.4
+Point 3 7       3       9.4
+Point 4 11.6    10.4    0
+Point 5 8       4       12.4
+Point 6 2       6       13.6
+Point 7 6       0       10.4
+Point 8 0       6       11.6
+
+Current Centroids:
+Centroid 0: 9 3 
+Centroid 1: 10 8 
+Centroid 2: 1 6.6 
+
+Distance Table:
+        Centroid 0      Centroid 1      Centroid 2
+Point 0 6.93333 14      2.3
+Point 1 4.13333 11.2    5.5
+Point 2 8.4     4       7.7
+Point 3 7.06667 0       11.7
+Point 4 11      9.4     2.3
+Point 5 10.0667 3       14.7
+Point 6 2.6     9       11.3
+Point 7 8.06667 3       12.7
+Point 8 2.06667 7       9.3
+
+Current Centroids:
+Centroid 0: 7.66667 2.26667 
+Centroid 1: 8 9 
+Centroid 2: 1 4.3 
+Converged in 2 iterations.
+Point 0 is in cluster 2.
+Point 1 is in cluster 0.
+Point 2 is in cluster 1.
+Point 3 is in cluster 1.
+Point 4 is in cluster 2.
+Point 5 is in cluster 1.
+Point 6 is in cluster 0.
+Point 7 is in cluster 1.
+Point 8 is in cluster 0.
+
+Final Centroids:
+Centroid 0: 7.66667 2.26667 
+Centroid 1: 8 9 
+Centroid 2: 1 4.3 
+
+
+
+Silhouette and Davies-Douldin Score and indices for various clustering algorithms
+
+KMeans Silhouette Score: 0.46761358158775435
+KMeans Davies-Bouldin Index: 0.7152768202484618
+
+
+KModes Silhouette Score: -0.27951535885213963
+KModes Davies-Bouldin Index: 3.8345220198672756
+
+
+Gaussian Mixture Silhouette Score: 0.4310103691306562
+Gaussian Mixture Davies-Bouldin Index: 0.7039397900724359
+
+
+DBSCAN Silhouette Score: 0.1135163893571667
+DBSCAN Davies-Bouldin Index: 2.5520714073233335
+
+
+Ward Linkage Silhouette Score: 0.4618340266628975
+Ward Linkage Davies-Bouldin Index: 0.7068435076376502
+
+
+Complete Linkage Silhouette Score: 0.4618340266628975
+Complete Linkage Davies-Bouldin Index: 0.7068435076376502
+
+
+Average Linkage Silhouette Score: 0.46761358158775435
+Average Linkage Davies-Bouldin Index: 0.7152768202484618
+
+
+Single Linkage Silhouette Score: 0.365677402459876
+Single Linkage Davies-Bouldin Index: 0.36466169396889353

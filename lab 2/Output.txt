@@ -1,0 +1,79 @@
+Output for Naive bayes C++ program is:
+ Predicted label: electronics
+
+
+Naive Bayes Output
+Naïve Bayes Accuracy: 0.7662337662337663
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.83      0.80      0.81        99
+           1       0.66      0.71      0.68        55
+
+    accuracy                           0.77       154
+   macro avg       0.75      0.75      0.75       154
+weighted avg       0.77      0.77      0.77       154
+
+
+Linear Regression with Stochastic Gradient Descent Output
+SGD Linear Regression Accuracy: 0.6493506493506493
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.65      0.99      0.78        99
+           1       0.67      0.04      0.07        55
+
+    accuracy                           0.65       154
+   macro avg       0.66      0.51      0.43       154
+weighted avg       0.66      0.65      0.53       154
+
+
+Logistic Regression Output
+Logistic Regression Accuracy: 0.7467532467532467
+Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.81      0.79      0.80        99
+           1       0.64      0.67      0.65        55
+
+    accuracy                           0.75       154
+   macro avg       0.73      0.73      0.73       154
+weighted avg       0.75      0.75      0.75       154
+
+
+K Nearest Neighbours Output
+KNN (Euclidean) Accuracy: 0.6623376623376623
+KNN (Manhattan) Accuracy: 0.6688311688311688
+Classification Report (Euclidean):
+               precision    recall  f1-score   support
+
+           0       0.75      0.71      0.73        99
+           1       0.52      0.58      0.55        55
+
+    accuracy                           0.66       154
+   macro avg       0.64      0.64      0.64       154
+weighted avg       0.67      0.66      0.67       154
+
+Classification Report (Manhattan):
+               precision    recall  f1-score   support
+
+           0       0.76      0.72      0.74        99
+           1       0.53      0.58      0.56        55
+
+    accuracy                           0.67       154
+   macro avg       0.64      0.65      0.65       154
+weighted avg       0.68      0.67      0.67       154
+
+
+
+Decision Tree using Information Gain Output
+Decision Tree (Entropy) Accuracy: 0.7207792207792207
+Classification Report (Entropy):
+               precision    recall  f1-score   support
+
+           0       0.79      0.77      0.78        99
+           1       0.60      0.64      0.62        55
+
+    accuracy                           0.72       154
+   macro avg       0.70      0.70      0.70       154
+weighted avg       0.72      0.72      0.72       154
